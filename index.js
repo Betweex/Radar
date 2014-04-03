@@ -35,11 +35,7 @@ io.set('log level', 1);
 
 //Listen for the Socket.IO Connections. Once connected, start the game Logic.
 io.sockets.on('connection', function(socket) {
-<<<<<<< HEAD
-    console.log('\n\nClient Connection Established....... Starting Game Logic');
-=======
     console.log('\nClient Connection Established....... Starting Game Logic');
->>>>>>> Main Menu and Assets
     gm.GameBegin(io, socket);
     
 });

@@ -5,9 +5,6 @@ OverGame.GameState = function(game) {
 
 OverGame.GameState.prototype = {
        
-<<<<<<< HEAD
-    
-=======
 	create: function() {	
 	
 	},
@@ -15,6 +12,5 @@ OverGame.GameState.prototype = {
     update: function() {
 		
 	}
->>>>>>> Main Menu and Assets
 };
 

@@ -79,10 +79,7 @@ jQuery(function($){
                     App.$gameArea = $('#preGameArea');
                     App.$templateIntroScreen = $('#intro-screen-template').html();
                     App.$templateWaitingScreen = $('#waiting-game-template').html();
-<<<<<<< HEAD
-=======
 					App.$templateInGameScreen = $('#in-game-template').html();
->>>>>>> Main Menu and Assets
                 },
 
                 /*
@@ -163,11 +160,7 @@ jQuery(function($){
                 Player: {
                     
                     //hostSocketId: '',
-<<<<<<< HEAD
-                    myName: 'anoni',
-=======
                     myName: 'anon',
->>>>>>> Main Menu and Assets
 					
 					Update: function(data) {
 						App.mySocketId = data.mySocketId;
@@ -176,55 +169,33 @@ jQuery(function($){
 		
 					onReadyClick: function() {
 						
-<<<<<<< HEAD
-						App.Player.myName = $('#inputPlayerName').val();
-=======
->>>>>>> Main Menu and Assets
 						var data = {
 								gameId: App.gameId,
 								playerId: App.mySocketId
 							}
-<<<<<<< HEAD
-=======
 						
->>>>>>> Main Menu and Assets
 						IO.socket.emit('addReady', data);
 						App.Player.onPlayClick();
 					},
                         
                     onPlayClick: function() {
-<<<<<<< HEAD
-                        if(App.readyPlayers >= 2 && App.Player.myName != 'anoni') {
-=======
                         if(App.readyPlayers >= 2) {
->>>>>>> Main Menu and Assets
 							
 							var data = {
 								gameId: App.gameId,
 								playerId: App.mySocketId
 							}
-<<<<<<< HEAD
-							IO.socket.emit('allReady', data);
-						}
-						else {
-							if(App.readyPlayers < 2){
-=======
 							
 							IO.socket.emit('allReady', data);
 						}
 						else {
 							if(App.readyPlayers < 2) {
 								
->>>>>>> Main Menu and Assets
 								App.$gameArea.html(App.$templateWaitingScreen);
 								App.doTextFit('.title'); 
 							}
 							else {
-<<<<<<< HEAD
-								//App.$gameArea.html(App.$templateWaitingScreen);
-=======
 								
->>>>>>> Main Menu and Assets
 								 $('#playerWaitingMessage')
 								.append('<p/>')
 								.text('Joined Game ' + App.gameId + '. Please wait for game to begin.');	
@@ -233,13 +204,6 @@ jQuery(function($){
                     },
 					
 					startPhaser: function() {
-<<<<<<< HEAD
-                        var width = 1600;
-                        var height = 960;
-
-                        var game = new Phaser.Game(width, height, Phaser.AUTO, '');
-
-=======
 						
                         var width = 1600;
 						var height = 960;
@@ -248,20 +212,15 @@ jQuery(function($){
 						
 						//Initiate Boot and all other states
 						game.state.add('Pre', OverGame.PreBootState);	
->>>>>>> Main Menu and Assets
                         game.state.add('Boot', OverGame.BootState);
                         game.state.add('Loader', OverGame.LoaderState);
                         game.state.add('MainWindow', OverGame.MainWindowState);
                         game.state.add('Game', OverGame.GameState);
-<<<<<<< HEAD
-
-=======
 						game.state.add('Instructions', OverGame.InstructionState);
 												
 						//Clear all html and it's background content
 						App.$gameArea.html(App.$templateInGameScreen);
 						
->>>>>>> Main Menu and Assets
                         game.state.start('Boot');
 
                         window.game = game;
@@ -285,11 +244,7 @@ jQuery(function($){
                         }
                     );
                 }
-<<<<<<< HEAD
-
-=======
 		
->>>>>>> Main Menu and Assets
 	};    
                 
     IO.init();

@@ -43,10 +43,6 @@ function playGame() {
 		}
 	}
 	
-<<<<<<< HEAD
-	
-=======
->>>>>>> Main Menu and Assets
 	//If no available rooms
 	if(foundRoom === false){
 		
@@ -65,10 +61,6 @@ function playGame() {
 
 //Notify all browser clients in room to start their game
 function allReady(data){
-<<<<<<< HEAD
-	
-=======
->>>>>>> Main Menu and Assets
 	io.sockets.in(data.gameId).emit('beginGame');
 };
 
