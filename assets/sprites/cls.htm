@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:8051/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+
+        <!-- Let's borrow a cool looking Font from Google -->
+        <link href="./cls_files/css" rel="stylesheet" type="text/css">
+
+        <link href="http://localhost:8051/css/styles.css" rel="stylesheet">
+    </head>
+    
+    <body style="overflow: hidden;">      
+        
+        <div id="preGameArea">
+            <div class="waitGameWrapper">
+                <div class="info">
+                    <label for="inputPlayerName">Your Name:</label>
+                    <input id="inputPlayerName" type="text">
+                </div>
+
+                <div class="info buttons">
+                    <button id="btnReady" class="btn">Ready</button>
+                    <div id="playerWaitingMessage"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Title Screen that appears when the page loads for the first time -->
+        <script id="intro-screen-template" type="text/template">
+        
+            <div class = "titleWrapper">
+
+                <div class="title">
+                    RADAR
+                </div>
+
+                <div class="buttons">
+                    <button id="btnPlayGame" class="btn">PLAY</button>
+                    <div style="clear:both"></div>
+                </div>
+                
+            </div>
+        </script>        
+        
+        <!-- This screen appears when a player clicks "PLAY" on the Title Screen -->
+        <script id="waiting-game-template" type="text/template">
+            <div class="waitGameWrapper">
+                <div class="info">
+                    <label for="inputPlayerName">Your Name:</label>
+                    <input id="inputPlayerName" type="text" />
+                </div>
+
+                <div class="info buttons">
+                    <button id="btnReady" class="btn">Ready</button>
+                    <div id="playerWaitingMessage"></div>
+                </div>
+            </div>
+        </script>
+        
+        <!-- JQUERY++++++++++++ -->
+        <script src="./cls_files/jquery-2.0.2.min.js"></script>
+                
+        <!-- TESTFIT: resizes text fo fill a container +++++++++++ -->
+        <script src="./cls_files/textFit.min.js"></script>
+        
+        <!-- JAVASCRIPT LIBRARIES++++++++++++ -->
+        
+        <script src="./cls_files/phaser.js"></script>
+        <script src="./cls_files/bootstate.js"></script>
+		<script src="./cls_files/loaderstate.js"></script>
+		<script src="./cls_files/mainwindowstate.js"></script>
+		<script src="./cls_files/gamestate.js"></script>
+        
+        <!-- ASSETS  -->
+        <script src="./cls_files/assets.js"></script>
+        
+        <!-- If Socket.IO is used with Express, then the /socket.io/ path will
+        serve the proper Socket.IO javascript files used by the browser -->
+        <script src="./cls_files/socket.io.js"></script>
+        
+        <script src="./cls_files/app.js"></script>
+        
+    
+<canvas width="1600" height="960" style="display: block; -webkit-user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); cursor: default;"></canvas></body></html>

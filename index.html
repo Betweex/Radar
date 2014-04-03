@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8"/>
+
+        <!-- Let's borrow a cool looking Font from Google -->
+        <link href='https://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+
+        <link href="css/styles.css" rel="stylesheet">
+    </head>
+    
+    <body>      
+        
+        <div id="preGameArea">
+            <!-- This is where the templates defined below will be used -->
+        </div>
+        
+        <!-- Main Title Screen that appears when the page loads for the first time -->
+        <script id="intro-screen-template" type="text/template">
+        
+            <div class = "titleWrapper">
+
+                <div class="title">
+                    RADAR
+                </div>
+
+                <div class="buttons">
+                    <button id="btnPlayGame" class="btn">PLAY</button>
+                    <div style="clear:both"></div>
+                </div>
+                
+            </div>
+        </script>        
+        
+        <!-- This screen appears when a player clicks "PLAY" on the Title Screen -->
+        <script id="waiting-game-template" type="text/template">
+            <div class="waitGameWrapper">
+<<<<<<< HEAD
+                <div class="info">
+                    <label for="inputPlayerName">Your Name:</label>
+                    <input id="inputPlayerName" type="text" />
+                </div>
+
+=======
+>>>>>>> Main Menu and Assets
+                <div class="info buttons">
+                    <button id="btnReady" class="btn">Ready</button>
+                    <div id="playerWaitingMessage"></div>
+                </div>
+            </div>
+        </script>
+<<<<<<< HEAD
+=======
+		
+		<!-- This screen appears when a player clicks "Ready" and Phaser is started -->
+		<script id="in-game-template" type="text/template">
+            <div class="waitGameWrapper">
+            </div>
+        </script>
+>>>>>>> Main Menu and Assets
+        
+        <!-- JQUERY++++++++++++ -->
+        <script src="libs/jquery-2.0.2.min.js"></script>
+                
+        <!-- TESTFIT: resizes text fo fill a container +++++++++++ -->
+        <script src="libs/textFit.min.js"></script>
+        
+        <!-- JAVASCRIPT LIBRARIES++++++++++++ -->
+        
+        <script src = "includes/phaser.js"></script>
+        <script src="js/states/bootstate.js"></script>
+		<script src="js/states/loaderstate.js"></script>
+		<script src="js/states/mainwindowstate.js"></script>
+		<script src="js/states/gamestate.js"></script>
+<<<<<<< HEAD
+=======
+		<script src="js/states/instructionstate.js"></script>
+		<script src="js/states/prebootstate.js"></script>
+>>>>>>> Main Menu and Assets
+        
+        <!-- ASSETS  -->
+        <script src="js/assets.js"></script>
+        
+        <!-- If Socket.IO is used with Express, then the /socket.io/ path will
+        serve the proper Socket.IO javascript files used by the browser -->
+        <script src="http://localhost:8080/node_modules/socket.io/node_modules/socket.io-client/dist/socket.io.js"></script>
+        
+        <script src = "app.js"></script>
+        
+    </body>
+</html>
