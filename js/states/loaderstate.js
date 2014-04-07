@@ -6,14 +6,14 @@ OverGame.LoaderState = function(game)
 OverGame.LoaderState.prototype = {
 
     preload: function()
-    {		
+    {	
         var spinner = this.add.sprite(800, 480, 'spinner');
-		spinner.anchor.setTo(0.5, 0.5);
+		
+        spinner.anchor.setTo(0.5, 0.5);
 		spinner.animations.add('spin', [0, 1, 2, 3, 4, 5, 6, 7,8,9,10, 
                                         11, 12, 13, 14, 15, 16, 17], 20, true);
 		spinner.animations.play('spin');
         
-		
         var assets = OverGame.assets;
         
         //load all game assets!
@@ -36,6 +36,12 @@ OverGame.LoaderState.prototype = {
 			this.game.load.audio(obj.name, obj.path);
 		}
 				
+    },
+    
+    create: function()
+    {
+        game.menumusic = game.add.audio('1000ships', .3, true);
+        game.menumusic.play('', 0, 0.3, true);
     },
     
     update: function()

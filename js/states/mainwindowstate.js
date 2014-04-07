@@ -5,27 +5,22 @@ OverGame.MainWindowState = function(game) {
 OverGame.MainWindowState.prototype = {
     
     create: function() {
-        
-		this.game.menumusic = this.game.add.audio('1000ships', .3, true);
-        this.game.menumusic.play('', 0, 0.3, true);
-
         this.add.sprite(0, 0, 'background');
 		
-		var mouse_o = new Phaser.Sound(this.game, 'mouse_o', .4);
-		var mouse_d = new Phaser.Sound(this.game, 'mouse_d', .4);
+		var mouse_o = new Phaser.Sound(game, 'mouse_o', .4);
+		var mouse_d = new Phaser.Sound(game, 'mouse_d', .4);
 	
 		//Apply Events for the buttons
-		var start_btn = new Phaser.Button(this.game, 800, 480, 'start', function(){
-			this.game.state.start('Game');
+		var start_btn = new Phaser.Button(game, 800, 480, 'start', function(){
+			game.state.start('Game');
 		}, this, 1, 0, 1);
 			
-		var inst_btn = new Phaser.Button(this.game, 800, 625.5, 'instruct', function(){
-			this.game.state.start('Instructions');			
+		var inst_btn = new Phaser.Button(game, 800, 625.5, 'instruct', function(){
+			game.state.start('Instructions');			
 		}, this, 1, 0, 1);
 		
-		
-		var quit_btn = new Phaser.Button(this.game, 800, 771, 'quit', function(){
-			this.game.state.start('Pre');
+		var quit_btn = new Phaser.Button(game, 800, 771, 'quit', function(){
+			window.close();
 		}, this, 1, 0, 1);
 		
 		//Set button achors
@@ -39,13 +34,12 @@ OverGame.MainWindowState.prototype = {
 		quit_btn.setSounds(mouse_o, '', mouse_d);
 		
 		//Apply to game
-		this.game.add.existing(start_btn);
-		this.game.add.existing(inst_btn);
-		this.game.add.existing(quit_btn);
+		game.add.existing(start_btn);
+		game.add.existing(inst_btn);
+		game.add.existing(quit_btn);
 		
     },
 	
     update: function() {
-    
     }   
 };
